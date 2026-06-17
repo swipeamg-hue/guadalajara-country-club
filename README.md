@@ -1,6 +1,6 @@
-# Presentación Interactiva SPA — Club de Golf Las Lomas
+# Presentación Interactiva SPA — Guadalajara Country Club
 
-Esta es una aplicación web interactiva de una sola página (Single Page Application - SPA) de diseño premium, adaptada para ofrecer las soluciones químicas profesionales de **Swipe** a las 5 áreas clave del prestigioso **Club de Golf Las Lomas** en Guadalajara, Jalisco, México.
+Esta es una aplicación web interactiva de una sola página (Single Page Application - SPA) de diseño premium, adaptada para ofrecer las soluciones químicas profesionales de **Swipe** a las 5 áreas clave del prestigioso **Guadalajara Country Club** en Guadalajara, Jalisco, México.
 
 ---
 
@@ -33,7 +33,7 @@ Esta es una aplicación web interactiva de una sola página (Single Page Applica
      - *Gastronomía*: Despliega el protocolo paso a paso para desinfección según el distintivo de calidad (H).
      - *Mantenimiento*: Muestra la proporción exacta en mililitros de Swipe Concentrado y agua limpia según el tamaño del atomizador.
 
-5. **Sistema de Cotización Personalizado ("Cotizador Club Las Lomas")**:
+5. **Sistema de Cotización Personalizado ("Cotizador Guadalajara Country Club")**:
    - Los tomadores de decisiones pueden agregar productos químicos a una cotización de forma instantánea.
    - Una barra flotante en la parte inferior de la pantalla aparece con un contador dinámico.
    - Abre un modal con el desglose de productos y permite rellenar un formulario con los cargos reales del Club (Gerente de Mantenimiento, Director de Compras, etc.) para procesar la cotización.
@@ -45,7 +45,7 @@ Esta es una aplicación web interactiva de una sola página (Single Page Applica
 El proyecto está diseñado bajo una filosofía de **cero dependencias (Vanilla Stack)**, garantizando tiempos de carga instantáneos de menos de 1 segundo y máxima flexibilidad de personalización:
 
 ```
-Club-de-Golf-Las-Lomas/
+Guadalajara-Country-Club/
 ├── index.html              # Estructura principal y plantillas de modales
 ├── css/
 │   ├── main.css            # Estilos globales, variables de color y fuentes
