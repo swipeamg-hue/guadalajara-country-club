@@ -1,0 +1,717 @@
+/* ==========================================================================
+   ESTILOS DE COMPONENTES INTERACTIVOS
+   ========================================================================== */
+
+/* 1. CALCULADORA INTERACTIVA */
+.calculator-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--color-glass-border);
+  backdrop-filter: var(--glass-blur);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: auto;
+  box-shadow: var(--shadow-premium);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.calculator-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.01) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.calc-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding-bottom: 0.8rem;
+}
+
+.calc-icon {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+.calc-title {
+  font-family: var(--font-title);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-white);
+  letter-spacing: 0.5px;
+}
+
+.calc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.calc-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.calc-label {
+  font-size: 0.75rem;
+  font-family: var(--font-title);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.calc-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.calc-input {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--color-glass-border);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  color: var(--color-text-white);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition-fast);
+}
+
+.calc-input:focus {
+  outline: none;
+  border-color: currentColor;
+  box-shadow: 0 0 15px rgba(255,255,255,0.05);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Ocultar flechas nativas de input number */
+.calc-input::-webkit-outer-spin-button,
+.calc-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.calc-unit {
+  position: absolute;
+  right: 1rem;
+  font-size: 0.8rem;
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.calc-select {
+  appearance: none;
+  cursor: pointer;
+}
+
+/* Resultados de Calculadora */
+.calc-result-box {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  transition: var(--transition-fast);
+}
+
+.calc-result-value {
+  font-family: var(--font-title);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-text-white);
+  text-shadow: 0 0 15px rgba(255,255,255,0.1);
+  transition: var(--transition-fast);
+}
+
+.calc-result-label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   2. CAJÓN DE DETALLES DE PRODUCTO (SLIDE-OUT DRAWER)
+   ========================================================================== */
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-smooth);
+}
+
+.drawer-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.product-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 32%;
+  min-width: 420px;
+  max-width: 600px;
+  height: 100vh;
+  background: rgba(12, 12, 18, 0.95);
+  border-left: 1px solid var(--color-glass-border);
+  box-shadow: -20px 0 50px rgba(0,0,0,0.8);
+  z-index: 1005;
+  transform: translateX(100%);
+  transition: var(--transition-smooth);
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow-y: auto;
+}
+
+.drawer-overlay.open .product-drawer {
+  transform: translateX(0);
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--color-glass-border);
+  padding-bottom: 1.5rem;
+}
+
+.drawer-close {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-glass-border);
+  color: var(--color-glass-text);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.drawer-close:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+.drawer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.drawer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.drawer-sec-title {
+  font-family: var(--font-title);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-text-muted);
+  font-weight: 700;
+  border-left: 2px solid currentColor;
+  padding-left: 0.6rem;
+}
+
+.drawer-sec-content {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-glass-text);
+}
+
+.drawer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.drawer-list-item {
+  position: relative;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.drawer-list-item::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: currentColor;
+  font-weight: bold;
+}
+
+.safety-alert-box {
+  background: rgba(220, 38, 38, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.safety-icon {
+  color: #ef4444;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.safety-text {
+  font-size: 0.8rem;
+  color: #fca5a5;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   3. SISTEMA DE COTIZACIÓN (COTIZADOR GUADALAJARA COUNTRY CLUB)
+   ========================================================================== */
+
+/* Barra Flotante Inferior */
+.quotes-bar-container {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%, 100px);
+  z-index: 500;
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+              opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  pointer-events: none;
+}
+
+.quotes-bar-container.visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.quotes-floating-bar {
+  background: rgba(12, 12, 18, 0.85);
+  border: 1px solid var(--color-glass-border);
+  backdrop-filter: var(--glass-blur);
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.quotes-floating-bar:hover {
+  background: rgba(18, 18, 28, 0.95);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.quotes-bar-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.quotes-cart-icon {
+  width: 20px;
+  height: 20px;
+  stroke: var(--color-alberca);
+  stroke-width: 2;
+  fill: none;
+}
+
+.quotes-badge-count {
+  background: var(--color-alberca);
+  color: #000;
+  font-family: var(--font-title);
+  font-weight: 800;
+  font-size: 0.75rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
+}
+
+.quotes-bar-text {
+  font-family: var(--font-title);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  color: var(--color-text-white);
+}
+
+.btn-open-quotes {
+  background: var(--color-spa);
+  border: none;
+  color: #000;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.quotes-floating-bar:hover .btn-open-quotes {
+  filter: brightness(1.1);
+}
+
+/* Modal del Cotizador */
+.quotes-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quotes-modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.quotes-modal {
+  background: rgba(15, 15, 22, 0.95);
+  border: 1px solid var(--color-glass-border);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+  width: 90%;
+  max-width: 900px;
+  max-height: 85vh;
+  border-radius: 24px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  transform: scale(0.9);
+  transition: var(--transition-smooth);
+}
+
+.quotes-modal-overlay.open .quotes-modal {
+  transform: scale(1);
+}
+
+/* Columna de Productos de Cotización (Izquierda) */
+.quotes-list-panel {
+  padding: 2.5rem;
+  border-right: 1px solid var(--color-glass-border);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: auto;
+}
+
+.quotes-list-title {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-white);
+  border-bottom: 1px solid var(--color-glass-border);
+  padding-bottom: 1rem;
+}
+
+.quotes-items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.quote-item-row {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: var(--transition-fast);
+}
+
+.quote-item-row:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.quote-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.quote-item-name {
+  font-family: var(--font-title);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text-white);
+}
+
+.quote-item-area {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.quote-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.quote-qty-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-glass-border);
+  color: var(--color-text-white);
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-title);
+  font-weight: bold;
+  font-size: 1rem;
+  transition: var(--transition-fast);
+}
+
+.quote-qty-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255,255,255,0.3);
+}
+
+.quote-qty-val {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-text-white);
+  min-width: 20px;
+  text-align: center;
+}
+
+.quote-remove-btn {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  padding: 0.2rem;
+  opacity: 0.7;
+  transition: var(--transition-fast);
+  font-size: 1.1rem;
+}
+
+.quote-remove-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.empty-quote-msg {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Columna de Formulario (Derecha) */
+.quotes-form-panel {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+.quotes-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--color-glass-border);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.quotes-form-title {
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text-white);
+}
+
+.quotes-form-subtitle {
+  font-size: 0.8rem;
+  color: var(--color-spa);
+  font-weight: 600;
+}
+
+.quotes-close-modal {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-glass-border);
+  color: var(--color-text-muted);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  font-size: 1.1rem;
+}
+
+.quotes-close-modal:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-white);
+}
+
+.quotes-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
+
+.quotes-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.quotes-form-label {
+  font-size: 0.7rem;
+  font-family: var(--font-title);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.quotes-form-input {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--color-glass-border);
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  color: var(--color-text-white);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  transition: var(--transition-fast);
+}
+
+.quotes-form-input:focus {
+  outline: none;
+  border-color: var(--color-alberca);
+  background: rgba(0,0,0,0.5);
+}
+
+.quotes-btn-submit {
+  background: linear-gradient(135deg, var(--color-alberca) 0%, var(--color-spa) 100%);
+  border: none;
+  color: #000;
+  padding: 0.9rem;
+  border-radius: 8px;
+  font-family: var(--font-title);
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: var(--transition-fast);
+  box-shadow: 0 10px 20px rgba(0, 242, 254, 0.15);
+}
+
+.quotes-btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 242, 254, 0.3);
+  filter: brightness(1.05);
+}
+
+/* Cotización enviada exitosamente */
+.quotes-success-msg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.2rem;
+  padding: 3rem 1rem;
+}
+
+.success-icon-container {
+  width: 70px;
+  height: 70px;
+  background: rgba(5, 230, 180, 0.1);
+  border: 1px solid rgba(5, 230, 180, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-spa);
+  font-size: 2.2rem;
+  animation: pulse-success 2s infinite;
+}
+
+@keyframes pulse-success {
+  0% { box-shadow: 0 0 0 0 rgba(5, 230, 180, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(5, 230, 180, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(5, 230, 180, 0); }
+}

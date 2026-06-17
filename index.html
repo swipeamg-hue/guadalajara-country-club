@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swipe - Presentación Química Club de Golf Las Lomas</title>
+  <meta name="description" content="Soluciones químicas profesionales de Swipe personalizadas para las 5 áreas clave del Club de Golf Las Lomas: Alberca, Spa, Gimnasio, Gastronomía y Mantenimiento.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/components.css">
+  
+  <!-- Favicon placeholder or custom crest -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%2307070a%22 stroke=%22%2300f2fe%22 stroke-width=%226%22/><path d=%22M50 25 L65 55 L35 55 Z%22 fill=%22%2305e6b4%22/></svg>">
+</head>
+<body>
+
+  <!-- Fondo animado sutil -->
+  <div class="background-grid"></div>
+
+  <!-- Contenedor General SPA -->
+  <div class="spa-wrapper">
+
+    <!-- Encabezado General (Se oculta al expandir columna) -->
+    <header class="main-header" id="main-header">
+      <div class="brand-container" id="go-home">
+        <img src="images/brand_logo.png" alt="Swipe" style="height: 32px; width: auto; object-fit: contain;">
+      </div>
+
+      <!-- Badge de Identidad del Club -->
+      <div class="club-lomas-badge">
+        <img src="images/club_logo.png" alt="Club de Golf Las Lomas" style="height: 32px; width: auto; object-fit: contain;">
+      </div>
+    </header>
+
+    <!-- Layout Acordeón de 5 Columnas -->
+    <main class="columns-container" id="columns-container">
+
+      <!-- Overlay estático de triggers para evitar parpadeos en hover de pestañas -->
+      <div class="tabs-trigger-overlay">
+        <div class="tab-trigger" data-area="alberca"></div>
+        <div class="tab-trigger" data-area="spa"></div>
+        <div class="tab-trigger" data-area="gimnasio"></div>
+        <div class="tab-trigger" data-area="gastronomia"></div>
+        <div class="tab-trigger" data-area="mantenimiento"></div>
+        <div class="tab-trigger" data-area="ahorro"></div>
+        <div class="tab-trigger" data-area="demo"></div>
+      </div>
+
+      <!-- COLUMNA 1: ALBERCA -->
+      <section class="area-column col-alberca" data-area="alberca" id="col-alberca" style="--col-index: 0;">
+        <div class="column-overlay"></div>
+        <div class="column-pattern"></div>
+        
+        <!-- Estado Pestaña (Tab Header) -->
+        <div class="tab-header" style="border-top: 3px solid var(--color-alberca)">
+          <span class="tab-number">01</span>
+          <span class="tab-title">Alberca</span>
+        </div>
+
+        <!-- Estado Colapsado -->
+        <div class="collapsed-content">
+          <span class="column-number">01</span>
+          <h2 class="column-vertical-title">Alberca & Acuáticos</h2>
+          <div class="column-explore-hint">
+            <span>Explorar</span>
+            <svg class="explore-icon-arrow" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M19 12l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <!-- Estado Expandido (Dashboard) -->
+        <div class="expanded-content" id="expanded-alberca">
+          <div class="dashboard-header">
+            <div>
+              <span class="info-area-badge" style="color: var(--color-alberca)">Área Técnica</span>
+              <h2 class="info-title" style="font-family: var(--font-title);">Alberca & Acuáticos</h2>
+            </div>
+            <button class="close-section-btn" id="close-alberca">
+              <svg class="close-icon-arrow" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Regresar al Menú
+            </button>
+          </div>
+
+          <div class="dashboard-grid">
+            <!-- Panel de Información y Spotlight de Swipol (Izquierda) -->
+            <div class="info-panel">
+              <div class="info-title-group">
+                <span class="info-area-badge" style="color: var(--color-alberca)">Producto Estrella</span>
+                <h3 class="info-title" style="font-size: 2.5rem; color: #fff; font-family: var(--font-title); font-weight: 800; margin-top: 0.5rem; margin-bottom: 0.5rem;">Swipol</h3>
+                <p class="info-slogan" style="border-left: 2px solid var(--color-alberca); padding-left: 1rem; font-size: 0.95rem; line-height: 1.5;">Higiene rigurosa, desinfección total y prevención en las superficies, andadores y áreas comunes colindantes a las albercas.</p>
+              </div>
+              
+              <!-- Contenedor del Producto (Swipol) con su imagen -->
+              <div class="product-spotlight-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(15, 15, 25, 0.45); border: 1px solid var(--color-glass-border); padding: 2rem; border-radius: 16px; margin-top: 0.5rem; position: relative; overflow: hidden; box-shadow: var(--shadow-premium);">
+                <div class="product-spotlight-glow" style="position: absolute; width: 220px; height: 220px; background: var(--color-alberca-glow); filter: blur(60px); opacity: 0.25; z-index: 1;"></div>
+                
+                <img src="https://raw.githubusercontent.com/swipeamg-hue/Club-de-Golf-Las-Lomas/0f670cdd5d6681bbd487b315482a5fb478331f4b/images/swipol.png" onerror="this.onerror=null; this.src='images/swipol.png';" alt="Swipe Swipol" style="max-width: 95%; max-height: 380px; object-fit: contain; z-index: 2; filter: drop-shadow(0 16px 32px rgba(0,0,0,0.6)); transition: transform var(--transition-fast);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+              </div>
+            </div>
+
+            <!-- Panel de Información Técnica de Swipol (Derecha) -->
+            <div class="catalog-panel">
+              <div class="catalog-title-bar">
+                <h3 class="catalog-title" style="color: var(--color-alberca); font-family: var(--font-title); font-weight: 700; font-size: 1.4rem;">Información del Producto</h3>
+                <span class="catalog-subtitle" style="font-size: 0.85rem; color: var(--color-text-muted);">Especificaciones Técnicas</span>
+              </div>
+              
+              <div class="swipol-features-grid" style="display: flex; flex-direction: column; gap: 1rem; overflow-y: auto; max-height: calc(100vh - 240px); padding-right: 0.5rem;">
+                
+                <!-- Tarjeta 1 -->
+                <div class="feature-card" style="background: var(--color-dark-card); border: 1px solid var(--color-glass-border); border-left: 4px solid var(--color-alberca); border-radius: 12px; padding: 1.2rem; display: grid; grid-template-columns: 40px 1fr; gap: 1rem; box-shadow: 0 6px 18px rgba(0,0,0,0.1); transition: var(--transition-fast);" onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='rgba(0, 242, 254, 0.2)';" onmouseout="this.style.transform='none'; this.style.borderColor='var(--color-glass-border)';">
+                  <div class="feature-icon-container" style="width: 40px; height: 40px; background: rgba(0, 242, 254, 0.05); border: 1px solid rgba(0, 242, 254, 0.12); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--color-alberca);">
+                    <svg style="width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2" viewBox="0 0 24 24">
+                      <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"/><path d="M12 6c-2.5 0-4 1.5-4 4 0 4 3 5 3 7.5S9.5 20 7 20"/>
+                    </svg>
+                  </div>
+                  <div class="feature-text">
+                    <h4 style="font-family: var(--font-title); font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 0.3rem;">Prevención de Algas y Moho</h4>
+                    <p style="font-size: 0.85rem; line-height: 1.5; color: var(--color-glass-text); text-align: justify; margin: 0;">Evita de raíz la formación de capas resbaladizas de algas y moho negro en los andadores de piedra, azulejos, escalones y zonas húmedas que rodean la alberca, previniendo accidentes y caídas por deslizamientos.</p>
+                  </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="feature-card" style="background: var(--color-dark-card); border: 1px solid var(--color-glass-border); border-left: 4px solid var(--color-alberca); border-radius: 12px; padding: 1.2rem; display: grid; grid-template-columns: 40px 1fr; gap: 1rem; box-shadow: 0 6px 18px rgba(0,0,0,0.1); transition: var(--transition-fast);" onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='rgba(0, 242, 254, 0.2)';" onmouseout="this.style.transform='none'; this.style.borderColor='var(--color-glass-border)';">
+                  <div class="feature-icon-container" style="width: 40px; height: 40px; background: rgba(0, 242, 254, 0.05); border: 1px solid rgba(0, 242, 254, 0.12); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--color-alberca);">
+                    <svg style="width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2" viewBox="0 0 24 24">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                  </div>
+                  <div class="feature-text">
+                    <h4 style="font-family: var(--font-title); font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 0.3rem;">Bioseguridad Perimetral (Cero Irritación)</h4>
+                    <p style="font-size: 0.85rem; line-height: 1.5; color: var(--color-glass-text); text-align: justify; margin: 0;">Compuesto por cuaternario de amonio de quinta generación, es incoloro, inoloro y dermatológicamente seguro para socios que caminan descalzos. Desinfecta andadores, vestidores y camastros sin irritar la piel ni generar vapores químicos molestos.</p>
+                  </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="feature-card" style="background: var(--color-dark-card); border: 1px solid var(--color-glass-border); border-left: 4px solid var(--color-alberca); border-radius: 12px; padding: 1.2rem; display: grid; grid-template-columns: 40px 1fr; gap: 1rem; box-shadow: 0 6px 18px rgba(0,0,0,0.1); transition: var(--transition-fast);" onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='rgba(0, 242, 254, 0.2)';" onmouseout="this.style.transform='none'; this.style.borderColor='var(--color-glass-border)';">
+                  <div class="feature-icon-container" style="width: 40px; height: 40px; background: rgba(0, 242, 254, 0.05); border: 1px solid rgba(0, 242, 254, 0.12); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--color-alberca);">
+                    <svg style="width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2" viewBox="0 0 24 24">
+                      <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/>
+                    </svg>
+                  </div>
+                  <div class="feature-text">
+                    <h4 style="font-family: var(--font-title); font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 0.3rem;">Prevención de Infecciones Húmedas</h4>
+                    <p style="font-size: 0.85rem; line-height: 1.5; color: var(--color-glass-text); text-align: justify; margin: 0;">Su potente acción bactericida y fungicida elimina e inhibe los patógenos causantes del pie de atleta y otras infecciones cutáneas en zonas altamente húmedas como baños de pies, regaderas exteriores, escaleras y vestidores.</p>
+                  </div>
+                </div>
+
+                <!-- Tarjeta 4 -->
+                <div class="feature-card" style="background: var(--color-dark-card); border: 1px solid var(--color-glass-border); border-left: 4px solid var(--color-alberca); border-radius: 12px; padding: 1.2rem; display: grid; grid-template-columns: 40px 1fr; gap: 1rem; box-shadow: 0 6px 18px rgba(0,0,0,0.1); transition: var(--transition-fast);" onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='rgba(0, 242, 254, 0.2)';" onmouseout="this.style.transform='none'; this.style.borderColor='var(--color-glass-border)';">
+                  <div class="feature-icon-container" style="width: 40px; height: 40px; background: rgba(0, 242, 254, 0.05); border: 1px solid rgba(0, 242, 254, 0.12); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--color-alberca);">
+                    <svg style="width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2" viewBox="0 0 24 24">
+                      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                  </div>
+                  <div class="feature-text">
+                    <h4 style="font-family: var(--font-title); font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 0.3rem;">Estabilidad Térmica en Andadores</h4>
+                    <p style="font-size: 0.85rem; line-height: 1.5; color: var(--color-glass-text); text-align: justify; margin: 0;">Mantiene intacto su poder desinfectante residual ante la radiación solar y variaciones térmicas extremas, garantizando una barrera higiénica continua en andadores exteriores o techados.</p>
+                  </div>
+                </div>
+
+                <!-- Tarjeta 5 -->
+                <div class="feature-card" style="background: var(--color-dark-card); border: 1px solid var(--color-glass-border); border-left: 4px solid var(--color-alberca); border-radius: 12px; padding: 1.2rem; display: grid; grid-template-columns: 40px 1fr; gap: 1rem; box-shadow: 0 6px 18px rgba(0,0,0,0.1); transition: var(--transition-fast);" onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='rgba(0, 242, 254, 0.2)';" onmouseout="this.style.transform='none'; this.style.borderColor='var(--color-glass-border)';">
+                  <div class="feature-icon-container" style="width: 40px; height: 40px; background: rgba(0, 242, 254, 0.05); border: 1px solid rgba(0, 242, 254, 0.12); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--color-alberca);">
+                    <svg style="width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.5" viewBox="0 0 24 24">
+                      <path d="M4.5 16.5c-1.5 1.5-2.5 3.5-2.5 5.5h20c0-2-1-4-2.5-5.5"/><path d="M12 2v14M8 5l4-3 4 3"/>
+                    </svg>
+                  </div>
+                  <div class="feature-text">
+                    <h4 style="font-family: var(--font-title); font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 0.3rem;">Resistencia ante Depósitos Calcáreos</h4>
+                    <p style="font-size: 0.85rem; line-height: 1.5; color: var(--color-glass-text); text-align: justify; margin: 0;">Su fórmula de grado quirúrgico es altamente tolerante a las aguas duras y residuos minerales calcáreos que suelen acumularse en los andadores y desagües de las albercas.</p>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Elementos de control ocultos para mantener la compatibilidad con el render dinámico de JS -->
+              <div style="display: none;">
+                <div id="calc-container-alberca"></div>
+                <div id="catalog-grid-alberca"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COLUMNA 2: SPA & WELLNESS -->
+      <section class="area-column col-spa" data-area="spa" id="col-spa" style="--col-index: 1;">
+        <div class="column-overlay"></div>
+        <div class="column-pattern"></div>
+        
+        <!-- Estado Pestaña (Tab Header) -->
+        <div class="tab-header" style="border-top: 3px solid var(--color-spa)">
+          <span class="tab-number">02</span>
+          <span class="tab-title">Spa & Wellness</span>
+        </div>
+
+        <!-- Estado Colapsado -->
+        <div class="collapsed-content">
+          <span class="column-number">02</span>
+          <h2 class="column-vertical-title">Spa & Wellness</h2>
+          <div class="column-explore-hint">
+            <span>Explorar</span>
+            <svg class="explore-icon-arrow" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M19 12l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <!-- Estado Expandido (Dashboard) -->
+        <div class="expanded-content" id="expanded-spa">
+          <div class="dashboard-header">
+            <div>
+              <span class="info-area-badge" style="color: var(--color-spa)">Área Sensorial</span>
+              <h2 class="info-title" style="font-family: var(--font-title);">Spa & Wellness</h2>
+            </div>
+            <button class="close-section-btn" id="close-spa">
+              <svg class="close-icon-arrow" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Regresar al Menú
+            </button>
+          </div>
+
+          <div class="dashboard-grid">
+            <!-- Columna Izquierda: Selector de 4 Productos (info-panel) -->
+            <div class="info-panel">
+              <div class="info-title-group">
+                <span class="info-area-badge" style="color: var(--color-spa)">Línea Premium</span>
+                <h3 class="info-title" style="font-size: 2.3rem; color: #fff; font-family: var(--font-title); font-weight: 800; margin-top: 0.5rem; margin-bottom: 0.5rem;">Spa & Wellness</h3>
+                <p class="info-slogan" style="border-left: 2px solid var(--color-spa); padding-left: 1rem; font-size: 0.95rem; line-height: 1.5; color: var(--color-glass-text); text-align: justify; margin-top: 0.5rem; margin-bottom: 1.5rem;">
+                  Espacios de relajación profunda e higiene absoluta. Aromas de lujo y sanitización hipoalergénica botánica.
+                </p>
+              </div>
+
+              <!-- Selector de 5 Contenedores de Producto -->
+              <div class="spa-products-selector" id="spa-products-selector">
+                
+                <!-- Producto 0: Swipe Sure Thing -->
+                <div class="spa-product-tab active" data-product-id="sure_thing_spa">
+                  <div class="product-tab-img-container">
+                    <img src="images/sure_thing.png" alt="Swipe Sure Thing">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Neutralizador Aromatizante</span>
+                    <h4 class="product-tab-name">Swipe Sure Thing</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 1: Swipe Concentrado -->
+                <div class="spa-product-tab" data-product-id="swipe_concentrado_spa">
+                  <div class="product-tab-img-container">
+                    <img src="images/swipe_concentrado.png" alt="Swipe Limpiador Líquido Concentrado">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Limpiador Biodegradable</span>
+                    <h4 class="product-tab-name">Swipe Limpiador Concentrado</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 5: Swipe Brite -->
+                <div class="spa-product-tab" data-product-id="swipe_brite_spa">
+                  <div class="product-tab-img-container">
+                    <img src="images/swipe_brite.png" alt="Swipe Brite">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Desensarrante, desinfectante y desodorizante</span>
+                    <h4 class="product-tab-name">Swipe Brite</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 6: Swipe Blue Genie -->
+                <div class="spa-product-tab" data-product-id="blue_genie_spa">
+                  <div class="product-tab-img-container">
+                    <img src="images/blue_genie.png" alt="Swipe Blue Genie">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Mantenimiento Automático</span>
+                    <h4 class="product-tab-name">Swipe Blue Genie</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 7: Swipol -->
+                <div class="spa-product-tab" data-product-id="swipol_spa">
+                  <div class="product-tab-img-container">
+                    <img src="images/swipol.png" alt="Swipol">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Desinfectante de Spa & Vapor</span>
+                    <h4 class="product-tab-name">Swipol</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+              </div>
+
+              <!-- Elementos ocultos para preservar compatibilidad con scripts dinámicos -->
+              <div style="display: none;">
+                <div id="calc-container-spa"></div>
+                <div id="catalog-grid-spa"></div>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Información Técnica Dinámica (catalog-panel) -->
+            <div class="catalog-panel">
+              <div class="catalog-title-bar">
+                <h3 class="catalog-title" style="color: var(--color-spa); font-family: var(--font-title); font-weight: 700; font-size: 1.4rem;">Información del Producto</h3>
+                <span class="catalog-subtitle" style="font-size: 0.85rem; color: var(--color-text-muted);">Especificaciones Técnicas</span>
+              </div>
+
+              <div class="spa-dynamic-display">
+                <!-- Columna de Spotlight (Imagen del Producto y Botón Agregar) -->
+                <div class="spa-spotlight-column">
+                  <div class="spa-spotlight-card" id="spa-spotlight-card">
+                    <div class="spa-spotlight-glow"></div>
+                    <img id="spa-spotlight-img" src="images/swipe_concentrado.png" alt="Swipe Limpiador Concentrado">
+                    <!-- Contenedor para SVGs cuando el producto no tiene imagen dedicada -->
+                    <div id="spa-spotlight-svg-container" style="display: none; z-index: 2;"></div>
+                  </div>
+
+                </div>
+
+                <!-- Columna de Características Técnicas -->
+                <div class="spa-features-column" id="spa-features-column">
+                  <!-- Renderizado por defecto del Producto 1 (Swipe Concentrado) -->
+                  
+                  <!-- Ficha 1: Biodegradabilidad y Ecología -->
+                  <div class="spa-feature-card">
+                    <div class="spa-feature-icon-container">
+                      <svg class="feature-icon-svg" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 8a9 9 0 0 1-9 10z"/><path d="M9 22v-6"/></svg>
+                    </div>
+                    <div class="spa-feature-text">
+                      <h4>Biodegradabilidad >99% y Respeto Ecológico</h4>
+                      <p>Fórmula ultra concentrada con biodegradabilidad superior al 99%, libre de fosfatos. Completamente segura para los sistemas de drenaje y plantas tratadoras del Spa, garantizando el máximo cuidado ambiental en cada limpieza.</p>
+                    </div>
+                  </div>
+
+                  <!-- Ficha 2: pH Neutro y Seguridad de Superficies -->
+                  <div class="spa-feature-card">
+                    <div class="spa-feature-icon-container">
+                      <svg class="feature-icon-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 11l2 2 4-4"/></svg>
+                    </div>
+                    <div class="spa-feature-text">
+                      <h4>pH Neutro: Seguro en Maderas, Mármol y Camillas</h4>
+                      <p>Su versión de pH Neutro (pH 7) es ideal para limpiar sin dañar las maderas finas de saunas, recubrimientos de mármol, camillas de masaje, tapizados de vinilo y acabados premium del Spa, preservando su apariencia e integridad.</p>
+                    </div>
+                  </div>
+
+                  <!-- Ficha 3: Diluciones y Rendimiento -->
+                  <div class="spa-feature-card">
+                    <div class="spa-feature-icon-container">
+                      <svg class="feature-icon-svg" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <div class="spa-feature-text">
+                      <h4>Diluciones Adaptadas al Spa</h4>
+                      <p>Estética diaria (1:100) para espejos, cromos y superficies brillantes de la recepción del Spa. Lavado de pisos y vestidores (1:12) para higiene profunda sin dejar residuos que alteren los aromas de la aromaterapia.</p>
+                    </div>
+                  </div>
+
+                  <!-- Ficha 4: Sin Cáusticos -->
+                  <div class="spa-feature-card">
+                    <div class="spa-feature-icon-container">
+                      <svg class="feature-icon-svg" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    </div>
+                    <div class="spa-feature-text">
+                      <h4>Sin Cáusticos: Seguro para Socios y Personal</h4>
+                      <p>Fórmula sin cáusticos libres que no reseca ni irrita las manos del personal de limpieza, no es inflamable y no corroe metales ni superficies delicadas. Cero incompatibilidades con la atmósfera sensorial del Spa.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COLUMNA 3: GIMNASIO -->
+      <section class="area-column col-gimnasio" data-area="gimnasio" id="col-gimnasio" style="--col-index: 2;">
+        <div class="column-overlay"></div>
+        <div class="column-pattern"></div>
+        
+        <!-- Estado Pestaña (Tab Header) -->
+        <div class="tab-header" style="border-top: 3px solid var(--color-gimnasio)">
+          <span class="tab-number">03</span>
+          <span class="tab-title">Gimnasio</span>
+        </div>
+
+        <!-- Estado Colapsado -->
+        <div class="collapsed-content">
+          <span class="column-number">03</span>
+          <h2 class="column-vertical-title">Gimnasio & Fitness</h2>
+          <div class="column-explore-hint">
+            <span>Explorar</span>
+            <svg class="explore-icon-arrow" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M19 12l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <!-- Estado Expandido (Dashboard) -->
+        <div class="expanded-content" id="expanded-gimnasio">
+          <div class="dashboard-header">
+            <div>
+              <span class="info-area-badge" style="color: var(--color-gimnasio)">Área Deportiva</span>
+              <h2 class="info-title" style="font-family: var(--font-title);">Gimnasio & Fitness</h2>
+            </div>
+            <button class="close-section-btn" id="close-gimnasio">
+              <svg class="close-icon-arrow" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Regresar al Menú
+            </button>
+          </div>
+
+          <div class="dashboard-grid">
+            <!-- Columna Izquierda: Selector de 2 Productos (info-panel) -->
+            <div class="info-panel">
+              <div class="info-title-group">
+                <span class="info-area-badge" style="color: var(--color-gimnasio)">Línea Deportiva</span>
+                <h3 class="info-title" style="font-size: 2.3rem; color: #fff; font-family: var(--font-title); font-weight: 800; margin-top: 0.5rem; margin-bottom: 0.5rem;">Gimnasio & Fitness</h3>
+                <p class="info-slogan" style="border-left: 2px solid var(--color-gimnasio); padding-left: 1rem; font-size: 0.95rem; line-height: 1.5; color: var(--color-glass-text); text-align: justify; margin-top: 0.5rem; margin-bottom: 1.5rem;">
+                  Máxima higiene deportiva que protege la salud de los socios y preserva las instalaciones del club. Secado rápido y protección anticorrosiva para pantallas y tapizados.
+                </p>
+              </div>
+
+              <!-- Selector de 2 Contenedores de Producto -->
+              <div class="gym-products-selector" id="gym-products-selector">
+                
+                <!-- Producto 1: Swipe Concentrado -->
+                <div class="gym-product-tab active" data-product-id="swipe_concentrado_gym">
+                  <div class="product-tab-img-container">
+                    <img src="images/swipe_concentrado.png" alt="Swipe Limpiador Líquido Concentrado">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Desengrasante Deportivo</span>
+                    <h4 class="product-tab-name">Swipe Limpiador Concentrado</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 2: Swipol -->
+                <div class="gym-product-tab" data-product-id="swipol_gym">
+                  <div class="product-tab-img-container">
+                    <img src="images/swipol.png" alt="Swipol">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Sanitizante de Equipamiento</span>
+                    <h4 class="product-tab-name">Swipol</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+              </div>
+
+              <!-- Elementos de control ocultos para mantener la compatibilidad con el render dinámico de JS -->
+              <div style="display: none;">
+                <div id="calc-container-gimnasio"></div>
+                <div id="catalog-grid-gimnasio"></div>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Información Técnica Dinámica (catalog-panel) -->
+            <div class="catalog-panel">
+              <div class="catalog-title-bar">
+                <h3 class="catalog-title" style="color: var(--color-gimnasio); font-family: var(--font-title); font-weight: 700; font-size: 1.4rem;">Información del Producto</h3>
+                <span class="catalog-subtitle" style="font-size: 0.85rem; color: var(--color-text-muted);">Especificaciones Técnicas</span>
+              </div>
+
+              <div class="gym-dynamic-display">
+                <!-- Columna de Spotlight (Imagen del Producto y Botón Agregar) -->
+                <div class="gym-spotlight-column">
+                  <div class="gym-spotlight-card" id="gym-spotlight-card">
+                    <div class="gym-spotlight-glow"></div>
+                    <img id="gym-spotlight-img" src="images/swipe_concentrado.png" alt="Swipe Limpiador Concentrado">
+                    <!-- Contenedor para SVGs cuando el producto no tiene imagen dedicada -->
+                    <div id="gym-spotlight-svg-container" style="display: none; z-index: 2;"></div>
+                  </div>
+                </div>
+
+                <!-- Columna de Características Técnicas -->
+                <div class="gym-features-column" id="gym-features-column">
+                  <!-- Renderizado por defecto del Producto 1 (Swipe Concentrado) -->
+                  
+                  <!-- Ficha 1: Eliminación de Grasa y Sudor -->
+                  <div class="gym-feature-card">
+                    <div class="gym-feature-icon-container">
+                      <svg class="feature-icon-svg" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v3M10 9V5a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v7"/><path d="M4 15a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3z"/></svg>
+                    </div>
+                    <div class="gym-feature-text">
+                      <h4>Eliminación de Sudor y Grasa Corporal</h4>
+                      <p>Formulado con tensoactivos de alta potencia, remueve con rapidez el sudor, aceites bronceadores y grasas corporales acumuladas en empuñaduras, asientos, mancuernas y caminadoras, dejando los equipos en condiciones sanitarias impecables.</p>
+                    </div>
+                  </div>
+
+                  <!-- Ficha 2: Cuidado de Vinilos y Estructuras -->
+                  <div class="gym-feature-card">
+                    <div class="gym-feature-icon-container">
+                      <svg class="feature-icon-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 11l2 2 4-4"/></svg>
+                    </div>
+                    <div class="gym-feature-text">
+                      <h4>Protección de Tapizados y Equipos Premium</h4>
+                      <p>Cero cáusticos libres: no reseca, no cuartea ni daña el vinilo de asientos, el cuero sintético de equipos ni los plásticos de caminadoras y elípticas. Preserva el aspecto premium del equipamiento de fitness del club.</p>
+                    </div>
+                  </div>
+
+                  <!-- Ficha 3: Diluciones y Rendimiento -->
+                  <div class="gym-feature-card">
+                    <div class="gym-feature-icon-container">
+                      <svg class="feature-icon-svg" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <div class="gym-feature-text">
+                      <h4>Diluciones para el Gimnasio</h4>
+                      <p>Estética diaria (1:100) para limpieza rápida de equipos entre usuarios. Lavado normal (1:12) para desengrase periódico de estructuras metálicas, pisos deportivos y mats de ejercicio. Rinde hasta 100 litros de solución útil.</p>
+                    </div>
+                  </div>
+
+                  <!-- Ficha 4: Respeto Ecológico -->
+                  <div class="gym-feature-card">
+                    <div class="gym-feature-icon-container">
+                      <svg class="feature-icon-svg" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 8a9 9 0 0 1-9 10z"/><path d="M9 22v-6"/></svg>
+                    </div>
+                    <div class="gym-feature-text">
+                      <h4>Biodegradable >99% y Seguro para Drenajes</h4>
+                      <p>Fórmula ecológica libre de fosfatos, biodegradable en más del 99%. No es tóxico, no es inflamable y no corroe metales. Completamente seguro para el personal de limpieza, socios que entrenan y el medio ambiente.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- COLUMNA 4: GASTRONOMÍA -->
+      <section class="area-column col-gastronomia" data-area="gastronomia" id="col-gastronomia" style="--col-index: 3;">
+        <div class="column-overlay"></div>
+        <div class="column-pattern"></div>
+        
+        <!-- Estado Pestaña (Tab Header) -->
+        <div class="tab-header" style="border-top: 3px solid var(--color-gastronomia)">
+          <span class="tab-number">04</span>
+          <span class="tab-title">Gastronomía</span>
+        </div>
+
+        <!-- Estado Colapsado -->
+        <div class="collapsed-content">
+          <span class="column-number">04</span>
+          <h2 class="column-vertical-title">Gastronomía & Cocinas</h2>
+          <div class="column-explore-hint">
+            <span>Explorar</span>
+            <svg class="explore-icon-arrow" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M19 12l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <!-- Estado Expandido (Dashboard) -->
+        <div class="expanded-content" id="expanded-gastronomia">
+          <div class="dashboard-header">
+            <div>
+              <span class="info-area-badge" style="color: var(--color-gastronomia)">Área Gastronómica</span>
+              <h2 class="info-title" style="font-family: var(--font-title);">Gastronomía & Cocinas</h2>
+            </div>
+            <button class="close-section-btn" id="close-gastronomia">
+              <svg class="close-icon-arrow" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Regresar al Menú
+            </button>
+          </div>
+
+          <div class="dashboard-grid">
+            <!-- Columna Izquierda: Selector de 2 Productos (info-panel) -->
+            <div class="info-panel">
+              <div class="info-title-group">
+                <span class="info-area-badge" style="color: var(--color-gastronomia)">Línea Gastronómica</span>
+                <h3 class="info-title" style="font-size: 2.3rem; color: #fff; font-family: var(--font-title); font-weight: 800; margin-top: 0.5rem; margin-bottom: 0.5rem;">Gastronomía & Cocinas</h3>
+                <p class="info-slogan" style="border-left: 2px solid var(--color-gastronomia); padding-left: 1rem; font-size: 0.95rem; line-height: 1.5; color: var(--color-glass-text); text-align: justify; margin-top: 0.5rem; margin-bottom: 1.5rem;">
+                  Cocinas de clase mundial impecables. Seguridad alimentaria total y vajillas resplandecientes, optimizando costos operativos con diluciones de alto rendimiento.
+                </p>
+              </div>
+
+              <!-- Selector de 2 Contenedores de Producto -->
+              <div class="gastronomia-products-selector" id="gastronomia-products-selector">
+                
+                <!-- Producto 1: Swipe Concentrado -->
+                <div class="gastronomia-product-tab active" data-product-id="swipe_concentrado_gastronomia">
+                  <div class="product-tab-img-container">
+                    <img src="images/swipe_concentrado.png" alt="Swipe Limpiador Líquido Concentrado">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Grado Alimenticio NSF A1</span>
+                    <h4 class="product-tab-name">Swipe Limpiador Concentrado</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 2: Swipol -->
+                <div class="gastronomia-product-tab" data-product-id="swipol_gastronomia">
+                  <div class="product-tab-img-container">
+                    <img src="images/swipol.png" alt="Swipol">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Sanitizante Grado Alimenticio</span>
+                    <h4 class="product-tab-name">Swipol</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 3: Veggiefruit Wash -->
+                <div class="gastronomia-product-tab" data-product-id="veggiefruit_wash">
+                  <div class="product-tab-img-container">
+                    <img src="images/veggiefruit_wash.png" alt="Veggiefruit Wash">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Desinfección de Alimentos</span>
+                    <h4 class="product-tab-name">Veggiefruit Wash</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 4: Crystal -->
+                <div class="gastronomia-product-tab" data-product-id="crystal">
+                  <div class="product-tab-img-container">
+                    <img src="images/crystal.png" alt="Crystal">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Cero Efecto Gota</span>
+                    <h4 class="product-tab-name">Crystal</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 5: Grease -->
+                <div class="gastronomia-product-tab" data-product-id="grease">
+                  <div class="product-tab-img-container">
+                    <img src="images/grease.png" alt="Grease">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Gel Quitacochambre</span>
+                    <h4 class="product-tab-name">Grease</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 6: Crystal DWM -->
+                <div class="gastronomia-product-tab" data-product-id="crystal_dwm">
+                  <div class="product-tab-img-container">
+                    <img src="images/crystal_dwm.png" alt="Crystal DWM">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Doble Acción Lavavajillas</span>
+                    <h4 class="product-tab-name">Crystal DWM</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 7: Hand Soap -->
+                <div class="gastronomia-product-tab" data-product-id="hand_soap_gastronomia">
+                  <div class="product-tab-img-container">
+                    <img src="images/hand_soap.png" alt="Swipe Hand Soap">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Inodoro y Germicida</span>
+                    <h4 class="product-tab-name">Swipe Hand Soap</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 8: Freezer Cleaner -->
+                <div class="gastronomia-product-tab" data-product-id="freezer_cleaner">
+                  <div class="product-tab-img-container">
+                    <img src="images/freezer_cleaner.png" alt="Freezer Cleaner">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Frío Extremo hasta -55 °C</span>
+                    <h4 class="product-tab-name">Freezer Cleaner</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+              </div>
+
+              <!-- Elementos de control ocultos para mantener la compatibilidad con el render dinámico de JS -->
+              <div style="display: none;">
+                <div id="calc-container-gastronomia"></div>
+                <div id="catalog-grid-gastronomia"></div>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Información Técnica Dinámica (catalog-panel) -->
+            <div class="catalog-panel">
+              <div class="catalog-title-bar">
+                <h3 class="catalog-title" style="color: var(--color-gastronomia); font-family: var(--font-title); font-weight: 700; font-size: 1.4rem;">Información del Producto</h3>
+                <span class="catalog-subtitle" style="font-size: 0.85rem; color: var(--color-text-muted);">Especificaciones Técnicas</span>
+              </div>
+
+              <div class="gastronomia-dynamic-display">
+                <!-- Columna de Spotlight (Imagen del Producto) -->
+                <div class="gastronomia-spotlight-column">
+                  <div class="gastronomia-spotlight-card" id="gastronomia-spotlight-card">
+                    <div class="gastronomia-spotlight-glow"></div>
+                    <img id="gastronomia-spotlight-img" src="images/swipe_concentrado.png" alt="Swipe Limpiador Concentrado">
+                    <!-- Contenedor para SVGs cuando el producto no tiene imagen dedicada -->
+                    <div id="gastronomia-spotlight-svg-container" style="display: none; z-index: 2;"></div>
+                  </div>
+                </div>
+
+                <!-- Columna de Características Técnicas -->
+                <div class="gastronomia-features-column" id="gastronomia-features-column">
+                  <!-- Renderizado por defecto del Producto 1 (Swipe Concentrado) -->
+                  
+                  <!-- Ficha 1: Inocuidad y Registro NSF A1 -->
+                  <div class="gastronomia-feature-card">
+                    <div class="gastronomia-feature-icon-container">
+                      <svg class="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 11l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="gastronomia-feature-text">
+                      <h4>Certificación Grado Alimenticio NSF A1 y SAGARPA</h4>
+                      <p>Avalado oficialmente por el registro NSF (Categoría A1) y SAGARPA como desengrasante de grado alimenticio. Completamente seguro para usarse en áreas de preparación de alimentos, mesas de trabajo, superficies de contacto directo y comedores del club.</p>
+                    </div>
+                  </div>
+
+                  <!-- Ficha 2: Desengrase de Campanas y Cocinas -->
+                  <div class="gastronomia-feature-card">
+                    <div class="gastronomia-feature-icon-container">
+                      <svg class="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1.5-3-1 1-1.5 1.62-1.5 3a2.5 2.5 0 0 0 .5 2.5z" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z" stroke-linecap="round"/></svg>
+                    </div>
+                    <div class="gastronomia-feature-text">
+                      <h4>Desengrase de Campanas, Parrillas y Freidoras</h4>
+                      <p>Su dilución pesada (1:4) elimina de raíz las grasas pesadas y cochambre carbonizado acumulado en campanas extractoras, parrillas de hierro, freidoras y superficies de acero inoxidable de las cocinas industriales del club.</p>
+                    </div>
+                  </div>
+
+                  <!-- Ficha 3: Diluciones y Rendimiento -->
+                  <div class="gastronomia-feature-card">
+                    <div class="gastronomia-feature-icon-container">
+                      <svg class="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="gastronomia-feature-text">
+                      <h4>Diluciones para Cocinas y Comedores</h4>
+                      <p>Mantenimiento diario de comedores y mesas (1:100). Limpieza operativa de pisos de cocina y área de lavado (1:12). Desengrase profundo de campanas, salamandras y áreas de fritura (1:4). 1 litro rinde hasta 100 litros de solución útil.</p>
+                    </div>
+                  </div>
+
+                  <!-- Ficha 4: Seguridad Operativa -->
+                  <div class="gastronomia-feature-card">
+                    <div class="gastronomia-feature-icon-container">
+                      <svg class="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="9" x2="12" y2="13" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="17" x2="12.01" y2="17" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="gastronomia-feature-text">
+                      <h4>Seguridad Total en Zonas de Alimentos</h4>
+                      <p>Sin cáusticos libres, no tóxico, no inflamable y no corrosivo. No daña ni despinta el acero inoxidable, granito ni equipos de cocina. Disponible en versión Low Foam para restregadoras automáticas de pisos en la cocina.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- COLUMNA 5: MANTENIMIENTO GENERAL -->
+      <section class="area-column col-mantenimiento" data-area="mantenimiento" id="col-mantenimiento" style="--col-index: 4;">
+        <div class="column-overlay"></div>
+        <div class="column-pattern"></div>
+        
+        <!-- Estado Pestaña (Tab Header) -->
+        <div class="tab-header" style="border-top: 3px solid var(--color-mantenimiento)">
+          <span class="tab-number">05</span>
+          <span class="tab-title">Mantenimiento</span>
+        </div>
+
+        <!-- Estado Colapsado -->
+        <div class="collapsed-content">
+          <span class="column-number">05</span>
+          <h2 class="column-vertical-title">Mantenimiento General</h2>
+          <div class="column-explore-hint">
+            <span>Explorar</span>
+            <svg class="explore-icon-arrow" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M19 12l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <!-- Estado Expandido (Dashboard) -->
+        <div class="expanded-content" id="expanded-mantenimiento">
+          <div class="dashboard-header">
+            <div>
+              <span class="info-area-badge" style="color: var(--color-mantenimiento)">Área Operativa</span>
+              <h2 class="info-title" style="font-family: var(--font-title);">Mantenimiento General</h2>
+            </div>
+            <button class="close-section-btn" id="close-mantenimiento">
+              <svg class="close-icon-arrow" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Regresar al Menú
+            </button>
+          </div>
+
+          <div class="dashboard-grid">
+            <!-- Columna Izquierda: Selector de Productos (info-panel) -->
+            <div class="info-panel">
+              <div class="info-title-group">
+                <span class="info-area-badge" style="color: var(--color-mantenimiento)">Línea Operativa</span>
+                <h3 class="info-title" style="font-size: 2.3rem; color: #fff; font-family: var(--font-title); font-weight: 800; margin-top: 0.5rem; margin-bottom: 0.5rem;">Mantenimiento General</h3>
+                <p class="info-slogan" style="border-left: 2px solid var(--color-mantenimiento); padding-left: 1rem; font-size: 0.95rem; line-height: 1.5; color: var(--color-glass-text); text-align: justify; margin-top: 0.5rem; margin-bottom: 1.5rem;">
+                  Preservación meticulosa de la Casa Club, oficinas, áreas comunes y vehículos utilitarios del complejo. Cuidado premium y sustentabilidad con diluciones inteligentes biodegradables.
+                </p>
+              </div>
+
+              <!-- Selector de Contenedores de Producto (Mantenimiento) -->
+              <div class="mantenimiento-products-selector" id="mantenimiento-products-selector">
+                
+                <!-- Producto 1: Swipe Concentrado -->
+                <div class="mantenimiento-product-tab active" data-product-id="swipe_concentrate">
+                  <div class="product-tab-img-container">
+                    <img src="images/swipe_concentrado.png" alt="Swipe Limpiador Concentrado">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Desengrasante Multiusos</span>
+                    <h4 class="product-tab-name">Swipe Limpiador Concentrado</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 2: Swipol -->
+                <div class="mantenimiento-product-tab" data-product-id="swipol_mantenimiento">
+                  <div class="product-tab-img-container">
+                    <img src="images/swipol.png" alt="Swipol">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Desinfectante Multiusos</span>
+                    <h4 class="product-tab-name">Swipol</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+
+                <!-- Producto 6: Swipe Rust Off -->
+                <div class="mantenimiento-product-tab" data-product-id="rust_off">
+                  <div class="product-tab-img-container">
+                    <img src="images/rust_off.png" alt="Swipe Rust Off">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Desincrustante & Antioxidante</span>
+                    <h4 class="product-tab-name">Swipe Rust Off</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 7: Swipe Alubrite -->
+                <div class="mantenimiento-product-tab" data-product-id="alubrite">
+                  <div class="product-tab-img-container">
+                    <img src="images/alubrite.png" alt="Swipe Alubrite">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Abrillantador & Restaurador</span>
+                    <h4 class="product-tab-name">Swipe Alubrite</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 8: Swipe Steelbrite -->
+                <div class="mantenimiento-product-tab" data-product-id="steelbrite">
+                  <div class="product-tab-img-container">
+                    <img src="images/steelbrite.png" alt="Swipe Steelbrite">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Grado Alimenticio & Protector</span>
+                    <h4 class="product-tab-name">Swipe Steelbrite</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 9: Swipe Sure Thing -->
+                <div class="mantenimiento-product-tab" data-product-id="sure_thing">
+                  <div class="product-tab-img-container">
+                    <img src="images/sure_thing.png" alt="Swipe Sure Thing">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Neutralizador Aromatizante</span>
+                    <h4 class="product-tab-name">Swipe Sure Thing</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 10: Swipe Biodegreaser -->
+                <div class="mantenimiento-product-tab" data-product-id="biodegreaser">
+                  <div class="product-tab-img-container">
+                    <img src="images/biodegreaser.png" alt="Swipe Biodegreaser">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Cultivo Biológico Activo</span>
+                    <h4 class="product-tab-name">Swipe Biodegreaser</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 11: Swipe Hand Soap -->
+                <div class="mantenimiento-product-tab" data-product-id="hand_soap">
+                  <div class="product-tab-img-container">
+                    <img src="images/hand_soap.png" alt="Swipe Hand Soap">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Antimicrobial & pH Balanceado</span>
+                    <h4 class="product-tab-name">Swipe Hand Soap</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+              </div>
+
+              <!-- Elementos de control ocultos para mantener la compatibilidad con el render dinámico de JS -->
+              <div style="display: none;">
+                <div id="calc-container-mantenimiento"></div>
+                <div id="catalog-grid-mantenimiento"></div>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Información Técnica Dinámica (catalog-panel) -->
+            <div class="catalog-panel">
+              <div class="catalog-title-bar">
+                <h3 class="catalog-title" style="color: var(--color-mantenimiento); font-family: var(--font-title); font-weight: 700; font-size: 1.4rem;">Información del Producto</h3>
+                <span class="catalog-subtitle" style="font-size: 0.85rem; color: var(--color-text-muted);">Especificaciones Técnicas</span>
+              </div>
+
+              <div class="mantenimiento-dynamic-display">
+                <!-- Columna de Spotlight (Imagen del Producto) -->
+                <div class="mantenimiento-spotlight-column">
+                  <div class="mantenimiento-spotlight-card" id="mantenimiento-spotlight-card">
+                    <div class="mantenimiento-spotlight-glow"></div>
+                    <img id="mantenimiento-spotlight-img" src="images/swipe_concentrado.png" alt="Swipe Limpiador Concentrado">
+                    <!-- Contenedor para SVGs cuando el producto no tiene imagen dedicada -->
+                    <div id="mantenimiento-spotlight-svg-container" style="display: none; z-index: 2;"></div>
+                  </div>
+                  
+                </div>
+
+                <!-- Columna de Características Técnicas -->
+                <div class="mantenimiento-features-column" id="mantenimiento-features-column">
+                  <!-- Renderizado por defecto del Producto 1 (Swipe Concentrado) -->
+                  
+                  <!-- Ficha 1: Desengrase de Alta Potencia -->
+                  <div class="mantenimiento-feature-card">
+                    <div class="mantenimiento-feature-icon-container">
+                      <svg class="feature-icon-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div class="mantenimiento-feature-text">
+                      <h4>Desengrase de Alta Potencia</h4>
+                      <p>Remueve con máxima rapidez grasas pesadas, aceites, hollín, polvo y cochambre en vialidades, motores, maquinaria pesada y talleres de mantenimiento del club.</p>
+                    </div>
+                  </div>
+
+                  <!-- Ficha 2: Rendimiento y Dosificación -->
+                  <div class="mantenimiento-feature-card">
+                    <div class="mantenimiento-feature-icon-container">
+                      <svg class="feature-icon-svg" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <div class="mantenimiento-feature-text">
+                      <h4>Rendimiento y Dosificación</h4>
+                      <p>Versatilidad total: Solución Liviana (1:100) para vidrios y Casa Club; Solución Normal (1:12) para vialidades y mantenimiento general de pasillos; Solución Pesada (1:4) para motores y talleres.</p>
+                    </div>
+                  </div>
+
+                  <!-- Ficha 3: Seguridad y Manejo -->
+                  <div class="mantenimiento-feature-card">
+                    <div class="mantenimiento-feature-icon-container">
+                      <svg class="feature-icon-svg" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    </div>
+                    <div class="mantenimiento-feature-text">
+                      <h4>Seguridad y Cuidado Ambiental</h4>
+                      <p>Fórmula biodegradable en más del 99%, libre de fosfatos. No es tóxica, no es inflamable y no daña ni despinta las superficies del complejo.</p>
+                    </div>
+                  </div>
+
+                  <!-- Ficha 4: Ventaja Técnica -->
+                  <div class="mantenimiento-feature-card">
+                    <div class="mantenimiento-feature-icon-container">
+                      <svg class="feature-icon-svg" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    </div>
+                    <div class="mantenimiento-feature-text">
+                      <h4>Versatilidad y pH Neutro</h4>
+                      <p>Versión Low Foam disponible para restregadoras automáticas de pisos y versión pH Neutro (pH 7) para proteger el funcionamiento de las plantas tratadoras del club.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- COLUMNA 6: AHORRO & ECOLOGÍA -->
+      <section class="area-column col-ahorro" data-area="ahorro" id="col-ahorro" style="--col-index: 5;">
+        <div class="column-overlay"></div>
+        <div class="column-pattern"></div>
+        
+        <!-- Estado Pestaña (Tab Header) -->
+        <div class="tab-header" style="border-top: 3px solid var(--color-ahorro)">
+          <span class="tab-number">06</span>
+          <span class="tab-title">Ahorro</span>
+        </div>
+
+        <!-- Estado Colapsado -->
+        <div class="collapsed-content">
+          <span class="column-number">06</span>
+          <h2 class="column-vertical-title">Ahorro & Ecología</h2>
+          <div class="column-explore-hint">
+            <span>Explorar</span>
+            <svg class="explore-icon-arrow" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M19 12l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <!-- Estado Expandido (Dashboard) -->
+        <div class="expanded-content" id="expanded-ahorro">
+          <div class="dashboard-header">
+            <div>
+              <span class="info-area-badge" style="color: var(--color-ahorro)">Área Financiera / Sustentable</span>
+              <h2 class="info-title" style="font-family: var(--font-title);">Ahorro & Ecología</h2>
+            </div>
+            <button class="close-section-btn" id="close-ahorro">
+              <svg class="close-icon-arrow" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Regresar al Menú
+            </button>
+          </div>
+
+          <div class="dashboard-grid">
+            <div class="info-panel">
+              <div class="info-title-group">
+                <p class="info-slogan">Sustentabilidad financiera y ambiental para el Club de Golf Las Lomas con inyección de alta concentración y control total de insumos.</p>
+              </div>
+              <div id="calc-container-ahorro"></div>
+            </div>
+
+            <div class="catalog-panel">
+              <div class="catalog-title-bar">
+                <h3 class="catalog-title">Sistemas e Ingeniería de Ahorro</h3>
+              </div>
+              <div class="catalog-grid" id="catalog-grid-ahorro">
+                <!-- Se inyecta dinámicamente -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COLUMNA 7: DEMOS & PRUEBAS EN SITIO -->
+      <section class="area-column col-demo" data-area="demo" id="col-demo" style="--col-index: 6;">
+        <div class="column-overlay"></div>
+        <div class="column-pattern"></div>
+        
+        <!-- Estado Pestaña (Tab Header) -->
+        <div class="tab-header" style="border-top: 3px solid var(--color-demo)">
+          <span class="tab-number">07</span>
+          <span class="tab-title">Demo</span>
+        </div>
+
+        <!-- Estado Colapsado -->
+        <div class="collapsed-content">
+          <span class="column-number">07</span>
+          <h2 class="column-vertical-title">Demos & Pruebas</h2>
+          <div class="column-explore-hint">
+            <span>Explorar</span>
+            <svg class="explore-icon-arrow" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M19 12l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <!-- Estado Expandido (Dashboard) -->
+        <div class="expanded-content" id="expanded-demo">
+          <div class="dashboard-header">
+            <div>
+              <span class="info-area-badge" style="color: var(--color-demo)">Área de Garantía</span>
+              <h2 class="info-title" style="font-family: var(--font-title);">Demos & Pruebas en Sitio</h2>
+            </div>
+            <button class="close-section-btn" id="close-demo">
+              <svg class="close-icon-arrow" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Regresar al Menú
+            </button>
+          </div>
+
+          <div class="dashboard-grid">
+            <div class="info-panel">
+              <div class="info-title-group">
+                <p class="info-slogan">Comprueba el uso, aplicación, rendimiento y los espectaculares resultados de nuestros productos de limpieza y desinfección.</p>
+              </div>
+              <div id="calc-container-demo"></div>
+            </div>
+
+            <div class="catalog-panel">
+              <div class="catalog-title-bar">
+                <h3 class="catalog-title">Línea de Demostraciones</h3>
+                <span class="catalog-subtitle">Pruebas en Vivo Sin Compromiso</span>
+              </div>
+              <div class="catalog-grid" id="catalog-grid-demo">
+                <!-- Se inyecta dinámicamente -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+
+
+    <!-- CAJÓN INFORMATIVO DE DETALLES DE PRODUCTO (DRAWER) -->
+    <div class="drawer-overlay" id="drawer-overlay">
+      <div class="product-drawer">
+        <div class="drawer-header">
+          <div id="drawer-header-left">
+            <!-- Título y categoría se inyectan en JS -->
+          </div>
+          <button class="drawer-close" id="drawer-close">×</button>
+        </div>
+        <div id="drawer-content-body">
+          <!-- El contenido técnico se inyecta en JS -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JS Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/calculators.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
